@@ -1,0 +1,66 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Sistema Integral de Administracion de Farmacia</h1>
+    <p class="lead">Todos los procesos de Farmacias Dra. Mimi en un solo lugar.</p>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col ">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="text-center card-title">Ventas</h2>
+      </div>
+      <img src="/images/farmacia.jpg" style="height: 250px;">
+      <div class="card-body">
+        <h3 class="">Sistema de venta de medicamentos</h3>
+        <p class="card-text">
+          Podra añadir medicamentos a la cuenta, introduciendo el codigo del producto. Tambien seleccionar un servicio que solicite el cliente
+        </p>
+      </div>
+      <div class="card-footer">
+        <a href="/farmaciaDashboard" class="btn btn-outline-primary btn-lg" style="text-decoration: none;">
+          Acceder
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="text-center card-title">Doctor</h2>
+      </div>
+      <img src="/images/doctora.jpg" class="card-img-top" alt="..." style="height: 250px;">
+      <div class="card-body">
+        <h3 class="card-title">Haz tu trabajo sin problemas</h3>
+        <p class="card-text">Con este sistema serás capaz de agregar pacientes a la base de datos, buscar medicamentos y pacientes, y crear recetas con un formato predefinido</p>
+      </div>
+      <div class="card-footer">
+        <a href="/doctorDashboard" class="btn btn-outline-primary btn-lg" style="text-decoration: none;">
+          Acceder
+        </a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="row justify-content-center mt-5 mb-5">
+    <div class="card" style="width: 550px;">
+      <div class="card-header">
+        <h2 class="text-center card-title">Gerencia</h2>
+      </div>
+      <img src="/images/gerente.jpg" class="card-img-top" alt="..." style="height: 230px;">
+      <div class="card-body">
+        <h3 class="card-title">Conoce lo que ocurre en tu negocio</h3>
+        <p class="card-text">Podras buscar un medicamento por su nombre, agregar o quitar un medicamento, modificar stock, etc. Ademas de consultas personalizadas. </p>
+      </div>
+      <div class="card-footer">
+        <a href="/gerenciaDashboard" class="btn btn-outline-primary btn-lg" style="text-decoration: none;">
+          Acceder
+        </a>
+      </div>
+    </div>
+</div>
+
+

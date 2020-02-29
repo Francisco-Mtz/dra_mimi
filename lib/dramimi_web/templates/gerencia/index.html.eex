@@ -1,0 +1,53 @@
+<div class="container">
+  <h1 class="text-center text-primary mt-4 mb-5">Menú Gerencia</h1>
+</div>
+
+<div class="container">
+  <div class="row ">
+    <div class="col text-center d-flex justify-content-center">
+      <a href="#" >
+        <div class="card" style="width: 18rem;">
+          <img src="/images/codigoMedicina.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Buscar medicamento</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col text-center d-flex justify-content-center">
+      <a href="#" >
+      <div class="card" style="width: 18rem;">
+          <img src="/images/servicio.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            
+            <h5 class="card-title">Agregar o Quitar medicamento</h5>
+          </div>
+        </div>
+        </a>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col text-center d-flex justify-content-center">
+        <a href="#" >
+        <div class="card" style="width: 18rem;">
+          <img src="/images/codigoMedicina.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Modificar Stock de un medicamento</h5>
+          </div>
+        </div>
+        </a>
+    </div>
+    <div class="col text-center d-flex justify-content-center">
+      <a href="#" >
+      <div class="card" style="width: 18rem;">
+          <img src="/images/servicio.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            
+            <h5 class="card-title">Consultas personalizadas</h5>
+          </div>
+      </div>
+      </a>
+    </div>
+  </div>
+</div>
