@@ -24,6 +24,7 @@ defmodule DramimiWeb do
       import Plug.Conn
       import DramimiWeb.Gettext
       alias DramimiWeb.Router.Helpers, as: Routes
+      import Phoenix.LiveView.Controller
     end
   end
 
@@ -42,6 +43,8 @@ defmodule DramimiWeb do
       import DramimiWeb.ErrorHelpers
       import DramimiWeb.Gettext
       alias DramimiWeb.Router.Helpers, as: Routes
+
+      import Phoenix.LiveView.Helpers
     end
   end
 
