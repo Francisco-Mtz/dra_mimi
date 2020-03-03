@@ -4,6 +4,7 @@ defmodule Dramimi.Repo.Migrations.CreateServicios do
   def change do
     create table(:servicios) do
       add :nombre, :string
+      add :descripcion, :string
       add :precio, :float
 
       timestamps()

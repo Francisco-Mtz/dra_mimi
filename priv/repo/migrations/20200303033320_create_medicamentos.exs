@@ -3,9 +3,12 @@ defmodule Dramimi.Repo.Migrations.CreateMedicamentos do
 
   def change do
     create table(:medicamentos) do
-      add :nombre, :string
+      add :nombreComercial, :string
+      add :nombreGenerico, :string
+      add :presentacion, :string
+      add :laboratorio, :string
       add :precio, :float
-      add :generico, :boolean, default: false, null: false
+      add :stock, :integer
 
       timestamps()
     end
