@@ -40,17 +40,19 @@
 <%= for medicamento <- @medicamentos do %>
     <div class="card mb-3 border-primary" style="max-width: 540px;">
         <div class="row no-gutters">
-            <div class="col-md-5 d-flex">
+            <div class="col-md-6 d-flex">
                 <img src="/images/medicina.jpg" style="width: 100%;" >
             </div>
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <div class="card-body">
                     <h4 class="card-title"><%= medicamento.nombreComercial %></h4>
                     <p class="card-text"><strong><%= medicamento.nombreGenerico %></strong> </p>
                     <p class="card-text"> Presentacion: <%= medicamento.presentacion %> </p>
                     <p class="card-text"> Laboratorio: <%= medicamento.laboratorio %> </p>
                     <p class="card-text"> <strong style="font-size: 30px;"> $<%= medicamento.precio %> </strong> </p>
-
+                    <button 
+                     phx-click="eliminarMedicamento" phx-value-id="<%= medicamento.id %>"
+                     class="btn btn-outline-danger">Eliminar</button>
                 </div>
             </div>
         </div>
@@ -60,15 +62,17 @@
 <%= for servicio <- @serviciosCuenta do %>
     <div class="card mb-3 border-primary" style="max-width: 540px;">
         <div class="row no-gutters">
-            <div class="col-md-5 d-flex">
+            <div class="col-md-6 d-flex">
                 <img src="/images/consulta.jpg" style="width: 100%;" >
             </div>
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <div class="card-body">
                     <h4 class="card-title"><%= servicio.nombre %></h4>
                     <p class="card-text"><strong><%= servicio.descripcion %></strong> </p>
                     <p class="card-text"> <strong style="font-size: 30px;"> $<%= servicio.precio %> </strong> </p>
-
+                    <button 
+                     phx-click="eliminarServicio" phx-value-id="<%= servicio.id %>"
+                     class="btn btn-outline-danger">Eliminar</button>
                 </div>
             </div>
         </div>
@@ -81,3 +85,10 @@
 
 <h1 class="mt-4 mb-4">Total a pagar: <strong>$<%= @total %> </strong> </h1>
 
+<button class="btn btn-outline-success btn-lg mb-5" phx-click="confirmar">Confirmar</button>
+
+<%= if @confirmado != "" do %>
+    <div class="alert alert-success mb-5" role="alert">
+        <strong> <%= @confirmado %> </strong>
+    </div>
+<% end %>
