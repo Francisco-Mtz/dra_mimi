@@ -2,30 +2,19 @@
   <h1 class="text-center text-primary mt-4 mb-5">Menú Farmacia</h1>
 </div>
 
-<h2>Cuenta</h2>
-
-
 <div class="container">
   <div class="row ">
     <div class="col text-center d-flex justify-content-center">
-      <a href="#" >
         <div class="card" style="width: 18rem;">
           <img src="/images/codigoMedicina.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Producto</h5>
+            <h5 class="card-title">Proceso de venta</h5>
+            <a href="/cuenta">
+            <button class="btn btn-outline-primary btn-lg">
+              Ir
+            </button> 
+            </a>
           </div>
         </div>
-      </a>
-    </div>
-    <div class="col text-center d-flex justify-content-center">
-      <a href="#" >
-      <div class="card" style="width: 18rem;">
-          <img src="/images/servicio.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            
-            <h5 class="card-title">Servicio</h5>
-          </div>
-        </div>
-        </a>
     </div>
   </div>

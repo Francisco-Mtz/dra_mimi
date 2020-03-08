@@ -16,7 +16,7 @@ config :dramimi, DramimiWeb.Endpoint,
   secret_key_base: "7qUc1PmFq9O+I2BCbpct0JcJl3ANKFO2RhjFqmpv1KwrrPYArL/NGDggMaMvoJsF",
   render_errors: [view: DramimiWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Dramimi.PubSub, adapter: Phoenix.PubSub.PG2],
-  live_view: [signing_salt: "jRVqhLkFPg7lcVdcwOdmmjfxb8Mbsdha"]
+  live_view: [signing_salt: "4Ir2KoHiDR/oG1kKf9cjY71XjXesnG6K"]
 
 # Configures Elixir's Logger
 config :logger, :console,
