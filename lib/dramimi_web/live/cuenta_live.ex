@@ -1,11 +1,14 @@
 defmodule DramimiWeb.CuentaLive do
   use Phoenix.LiveView
   alias Dramimi.Medicamentos
+  alias Dramimi.Servicios
   alias DramimiWeb.CuentaView
 
   def mount(__session, socket) do
     {:ok, assign(socket, 
     medicamentos: [],
+    servicios: Servicios.list_servicios(),
+    serviciosCuenta: [],
     total: 0.0,
     error: "",
     encontrado: nil)}
@@ -34,6 +37,27 @@ defmodule DramimiWeb.CuentaLive do
         {:noreply, assign(socket, error: "Medicamento no encontrado", encontrado: nil)}
     end
     # IO.inspect founded
+
+  end
+
+  def handle_event("agregarServicio", %{"servicio" => id}, socket) do
+    
+    try do
+      num = String.to_integer(id)
+      servicio = Servicios.get_servicio!(num)
+      IO.inspect servicio
+
+      suma = servicio.precio + socket.assigns.total
+
+      serviciosEnCuenta = socket.assigns.serviciosCuenta ++ [servicio]
+
+      {:noreply, assign(socket, total: suma, error: "", serviciosCuenta: serviciosEnCuenta)}
+    
+    rescue
+      Ecto.NoResultsError ->
+        {:noreply, assign(socket, error: "Servicio no encontrado")}
+    end
+
 
   end
 
