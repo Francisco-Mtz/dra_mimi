@@ -1,1 +1,96 @@
-<h2>Este es el leex</h2>
+
+<form action="#" phx-submit="guardarReceta" class="mb-5" >
+
+    <div class="form-group mb-4">
+        <label for="idPaciente">Id del paciente</label>
+        <input type="number" name="idPaciente" class="form-control"
+        style="-moz-appearance:textfield;">
+    </div>
+
+    <div class="form-group mb-4">
+    <label for="servicio">Servicio ofrecido</label>
+        <select style="max-width: 250px;" class="form-control" name="servicio">
+            <%= for servicio <- @servicios do %>
+                <option value="<%= servicio.id %>"><%= servicio.nombre %></option>
+            <% end %>
+        </select>
+    </div>
+    
+    
+    <div class="form-group mb-4">
+        <label for="altura">Altura</label>
+        <input type="number" name="altura" class="form-control" placeholder="170"
+        style="-moz-appearance:textfield;" value="170">
+    </div>
+
+    
+    <div class="form-group mb-4">
+        <label for="frecuenciaCardiaca">Frecuencia Cardiaca</label>
+        <input type="text" name="frecuenciaCardiaca" style="-moz-appearance:textfield;" 
+        class="form-control" placeholder="80" value="80"
+         />
+    </div>
+
+    
+    <div class="form-group mb-4">
+        <label for="frecuenciaRespiratoria">Frecuencia Respiratoria</label>
+        <input type="text" name="frecuenciaRespiratoria" class="form-control" placeholder="18"
+        style="-moz-appearance:textfield;" value="18">
+    </div>
+
+    
+    <div class="form-group mb-4">
+        <label for="peso">Peso</label>
+        <input type="number" name="peso" class="form-control"
+        style="-moz-appearance:textfield;">
+    </div>
+
+    
+    <div class="form-group mb-4">
+        <label for="presionArterial">Presion Arterial</label>
+        <input type="text" name="presionArterial" class="form-control" placeholder="100"
+        style="-moz-appearance:textfield;" value="100">
+    </div>
+
+    <div class="form-group mb-4">
+        <label for="temperatura">Temperatura</label>
+        <input type="number" name="temperatura" class="form-control" placeholder="36"
+        style="-moz-appearance:textfield;" value="36">
+    </div>
+
+    <div class="form-group mb-4">
+        <label for="diagnostico">Diagnostico</label>
+        <textarea name="diagnostico" class="form-control" id="diagnostico" rows="3"></textarea>
+    </div>
+    
+
+    <input class="btn btn-outline-success btn-lg mt-3" type="submit" value="Guardar"/>
+
+</form>
+
+
+<%= if @paciente != nil do %>
+    <h3>Informacion del paciente</h3>
+    <div class="card text-dark bg-light mb-3 mt-3" style="max-width: 18rem;">
+        <div class="card-header"><%= @paciente.nombre %></div>
+        <div class="card-body">
+            <h5 class="card-title">Edad: <%= @paciente.edad %> </h5>
+            <p class="card-text">Genero: <%= @paciente.genero %> </p>
+            <p class="card-text">Telefono: <%= @paciente.telefono %> </p>
+        </div>
+    </div>
+<% end %>
+
+<%= if @mensaje != "" do %>
+    <div class="alert alert-success mb-5" role="alert">
+        <%= @mensaje %>
+    </div>
+<% end %>
+
+<%= if @error != "" do %>
+    <div class="alert alert-danger" role="alert">
+        Error: <%= @error %>
+    </div>
+<% end %>
+
+

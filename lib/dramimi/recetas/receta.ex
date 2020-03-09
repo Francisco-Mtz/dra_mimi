@@ -21,5 +21,6 @@ defmodule Dramimi.Recetas.Receta do
     receta
     |> cast(attrs, [:idPaciente, :idServicio, :diagnostico, :peso, :altura, :temperatura, :frecuenciaCardiaca, :presionArterial, :frecuenciaRespiratoria])
     |> validate_required([:idPaciente, :idServicio, :diagnostico, :peso, :altura, :temperatura, :frecuenciaCardiaca, :presionArterial, :frecuenciaRespiratoria])
+    |> unique_constraint(:name, name: :recetas_pkey)
   end
 end
