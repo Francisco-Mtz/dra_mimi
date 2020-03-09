@@ -23,6 +23,8 @@ defmodule DramimiWeb.Router do
     get "/cuenta", FarmaciaController, :cuenta
 
     get "/doctorDashboard", DoctorController, :index
+    get "/receta", DoctorController, :receta
+
     get "/gerenciaDashboard", GerenciaController, :index
   end
 
