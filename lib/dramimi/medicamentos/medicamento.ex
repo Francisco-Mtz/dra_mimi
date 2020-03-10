@@ -1,6 +1,7 @@
 defmodule Dramimi.Medicamentos.Medicamento do
   use Ecto.Schema
   import Ecto.Changeset
+  alias Dramimi.Medicamentos.Medicamento
 
   schema "medicamentos" do
     field :laboratorio, :string
@@ -14,7 +15,7 @@ defmodule Dramimi.Medicamentos.Medicamento do
   end
 
   @doc false
-  def changeset(medicamento, attrs) do
+  def changeset(medicamento, attrs \\ %{}) do
     medicamento
     |> cast(attrs, [:nombreComercial, :nombreGenerico, :presentacion, :laboratorio, :precio, :stock])
     |> validate_required([:nombreComercial, :nombreGenerico, :presentacion, :laboratorio, :precio, :stock])
