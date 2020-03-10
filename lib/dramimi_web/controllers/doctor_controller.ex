@@ -8,6 +8,10 @@ defmodule DramimiWeb.DoctorController do
       render(conn, "index.html")
     end
 
+    def receta(conn, _params) do
+      render(conn, "receta.html")
+    end
+
     def agregar(conn, _params) do
       changeset=Paciente.changeset(%Paciente{})
       render(conn, "agregar.html", changeset: changeset)
