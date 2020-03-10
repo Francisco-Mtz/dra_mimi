@@ -3,6 +3,7 @@ defmodule DramimiWeb.DoctorController do
     alias Dramimi.Pacientes.Paciente
     alias Dramimi.Recetas.Receta
     alias Dramimi.Repo
+    alias Dramimi.Pacientes
 
     def index(conn, _params) do
       render(conn, "index.html")
@@ -38,6 +39,10 @@ defmodule DramimiWeb.DoctorController do
       {:ok, receta} -> render(conn, "index.html",nombreEnviado: idPaciente) 
       {:error, changeset} -> render(conn, "index.html")
       end
+    end
+    
+    def buscarp(conn, _params) do
+      render(conn, "buscarp.html",pacientes: Pacientes.list_pacientes )
     end
 
 
