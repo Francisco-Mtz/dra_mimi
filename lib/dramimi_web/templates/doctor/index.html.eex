@@ -15,11 +15,7 @@
       </a>
     </div>
     <div class="col text-center d-flex justify-content-center">
-<<<<<<< HEAD
-      <a href="crear_receta" >
-=======
       <a href="/receta" >
->>>>>>> d214478012ee4c7a742ff8ab649a9dba97254bc9
       <div class="card" style="width: 18rem;">
           <img src="/images/receta.jpeg" class="card-img-top" alt="...">
           <div class="card-body">

@@ -8,7 +8,6 @@ defmodule DramimiWeb.DoctorController do
       render(conn, "index.html")
     end
 
-<<<<<<< HEAD
     def agregar(conn, _params) do
       changeset=Paciente.changeset(%Paciente{})
       render(conn, "agregar.html", changeset: changeset)
@@ -41,10 +40,3 @@ defmodule DramimiWeb.DoctorController do
 
   end
   
-=======
-    def receta(conn, _params) do
-      render(conn, "receta.html")
-    end 
-
-  end
->>>>>>> d214478012ee4c7a742ff8ab649a9dba97254bc9
