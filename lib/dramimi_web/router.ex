@@ -31,16 +31,17 @@ defmodule DramimiWeb.Router do
     post "/nuevoPaciente", DoctorController, :nuevoPaciente
     post "/nuevaReceta", DoctorController, :nuevaReceta
   
-    #Rutas de apartado gerencia
-    get "/gerenciaDashboard", GerenciaController, :gerenciaC
-      
-    get "/Agregar_Medicamento", GerenciaController, :agregarMedicamentoC
-    post "/nuevoMedicamento", GerenciaController, :nuevoMedicamentoC
 
-    get "/Todos_los_medicamentos", GerenciaController, :allMedicamentosC
-
-    get "/Buscar_Medicamento", GerenciaController, :buscarMedicamentoC
-    post "/obtenerMedicamento", GerenciaController, :obtenerMedicamentoC
+        #Rutas de apartado gerencia
+        get "/gerenciaDashboard", GerenciaController, :gerenciaC
+    
+        get "/Agregar_Medicamento", GerenciaController, :agregarMedicamentoC
+        post "/nuevoMedicamento", GerenciaController, :nuevoMedicamentoC
+    
+        get "/Todos_los_medicamentos", GerenciaController, :allMedicamentosC
+    
+        get "/Buscar_Medicamento", GerenciaController, :buscarMedicamentoC
+        post "/obtenerMedicamento", GerenciaController, :obtenerMedicamentoC
     
   end
 
