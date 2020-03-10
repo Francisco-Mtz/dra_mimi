@@ -1,0 +1,45 @@
+<BR><BR>
+<h1 align="center">Crear Receta</h1>
+<BR><BR>
+
+
+<%= form_for @changeset, Routes.doctor_path(@conn, :nuevaReceta), fn f -> %>
+<label>
+    <h2>Paciente ID:</h2> <input type="number" name="idPaciente">
+  </label>
+  <BR><BR>
+  <label>
+    <h2>Servicio ID:</h2> <input type="number" name="idServicio">
+  </label>
+  <BR><BR>
+  <label>
+    <h2>Diagnostico:</h2> <input type="text" name="diagnostico">
+  </label>
+  <BR><BR>
+  <label>
+    <h2>Peso:</h2> <input type="number" name="peso">
+  </label>
+  <BR><BR>
+  <label>
+    <h2>Altura:</h2> <input type="number" name="altura">
+  </label>
+  <BR><BR>
+  <label>
+    <h2>Temperatura:</h2> <input type="number" name="temperatura">
+  </label>
+  <BR><BR>
+  <label>
+    <h2>Frecuencia cardiaca:</h2> <input type="text" name="frecuenciaCardiaca">
+  </label>
+  <BR><BR>
+  <label>
+    <h2>Presion arterial:</h2> <input type="text" name="presionArterial">
+  </label>
+  <BR><BR>
+  <label>
+    <h2>Frecuencia respiratoria:</h2> <input type="text" name="frecuenciaRespiratoria">
+  </label>
+  <BR><BR>
+   <h2 align="center"> <%= submit "Guardar" %> </h2>
+  
+<% end %>  

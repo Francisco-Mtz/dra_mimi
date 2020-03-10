@@ -5,9 +5,9 @@
 <div class="container">
   <div class="row ">
     <div class="col text-center d-flex justify-content-center">
-      <a href="#" >
+      <a href="/agregar" >
         <div class="card" style="width: 18rem;">
-          <img src="/images/codigoMedicina.jpg" class="card-img-top" alt="...">
+          <img src="/images/paciente.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Agregar paciente</h5>
           </div>
@@ -15,9 +15,9 @@
       </a>
     </div>
     <div class="col text-center d-flex justify-content-center">
-      <a href="#" >
+      <a href="crear_receta" >
       <div class="card" style="width: 18rem;">
-          <img src="/images/servicio.jpg" class="card-img-top" alt="...">
+          <img src="/images/receta.jpeg" class="card-img-top" alt="...">
           <div class="card-body">
             
             <h5 class="card-title">Crear receta</h5>

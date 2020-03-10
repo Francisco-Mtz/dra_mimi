@@ -5,8 +5,8 @@ defmodule Dramimi.Pacientes do
 
   import Ecto.Query, warn: false
   alias Dramimi.Repo
-
   alias Dramimi.Pacientes.Paciente
+ 
 
   @doc """
   Returns the list of pacientes.

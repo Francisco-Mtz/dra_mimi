@@ -22,6 +22,10 @@ defmodule DramimiWeb.Router do
     get "/farmaciaDashboard", FarmaciaController, :index
     get "/doctorDashboard", DoctorController, :index
     get "/gerenciaDashboard", GerenciaController, :index
+    get "/agregar", DoctorController, :agregar
+    get "/crear_receta", DoctorController, :crear_receta
+    post "/nuevoPaciente", DoctorController, :nuevoPaciente
+    post "/nuevaReceta", DoctorController, :nuevaReceta
   end
 
   # Other scopes may use custom stacks.
