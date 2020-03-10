@@ -30,6 +30,9 @@ defmodule DramimiWeb.Router do
     get "/buscarp", DoctorController, :buscarp
     post "/nuevoPaciente", DoctorController, :nuevoPaciente
     post "/nuevaReceta", DoctorController, :nuevaReceta
+    get "/buscarMedicamentoD", DoctorController, :buscarMedicamentoDC
+    post "/obtenerMedicamentoD", DoctorController, :obtenerMedicamentoDC
+    
   
 
         #Rutas de apartado gerencia
@@ -42,6 +45,7 @@ defmodule DramimiWeb.Router do
     
         get "/Buscar_Medicamento", GerenciaController, :buscarMedicamentoC
         post "/obtenerMedicamento", GerenciaController, :obtenerMedicamentoC
+        
     
   end
 

@@ -4,21 +4,21 @@
 
 
 <%= form_for @changeset, Routes.doctor_path(@conn, :nuevoPaciente), fn f -> %>
-<label>
-    <h2>Nombre:</h2> <input type="text" name="nombre">
-  </label>
-  <BR><BR>
-  <label>
-    <h2>Edad:</h2> <input type="number" name="edad">
-  </label>
-  <BR><BR>
-  <label>
-    <h2>Genero:"</h2> <input type="text" name="genero">
-  </label>
-  <BR><BR>
-  <label>
-    <h2>telefono:</h2> <input type="number" name="telefono">
-  </label>
-  <BR><BR>
-   <h2 align="center"> <%= submit "Guardar" %> </h2>
+<div class="form-group">
+    <label for="exampleFormControlInput1">Nombre:</label>
+    <input type="text" class="form-control" name="nombre">
+    <BR><BR>
+    <label for="exampleFormControlInput1">Edad:</label>
+    <input type="number" class="form-control" name="edad">
+    <BR><BR>
+    <label for="exampleFormControlInput1">Genero:</label>
+    <input type="text" class="form-control" name="genero">
+    <BR><BR>
+    <label for="exampleFormControlInput1">Telefono:</label>
+    <input type="number" class="form-control" name="telefono">
+    
+    <BR><BR>
+    </div>
+
+  <input class="btn btn-outline-success btn-lg mt-3" type="submit" value="Guardar"/>
 <% end %>  
