@@ -1,0 +1,25 @@
+<div class="justify-content-center">
+    <div class="phx-hero">
+    <h2> Medicamento encontrado </h2>
+    </div>
+            <div class="card border-primary mb-3" style="max-width: 70rem;">
+                <div class="card-header">Codigo: <%= @medicamento.id%></div>
+                <div class="card-body">
+                   <table>
+                        <tr>
+                            <td style="width: 15rem;"><b>Nombre comercial: </b><br><%= @medicamento.nombreComercial%></td>
+                            <td style="width: 15rem;"><b>Nombre generico: </b><br><%= @medicamento.nombreGenerico%></td>
+                            <td style="width: 10rem;"><b>Presentacion: </b><br><%= @medicamento.presentacion%></td>
+                            <td style="width: 10rem;"><b>Laboratorio: </b><br><%= @medicamento.laboratorio%></td>
+                            <td style="width: 10rem;"><b>Precio: </b><br><%= @medicamento.precio%></td>
+                            <td style="width: 10rem;"><b>Stock: </b><br><%= @medicamento.stock%></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div>
+            <button type="button" class="btn btn-outline-primary">Editar todo</button>
+            <button type="button" class="btn btn-outline-primary">Modificar Stock</button>
+            <button type="button" class="btn btn-outline-danger">Eliminar</button>
+            </div>
+</div>

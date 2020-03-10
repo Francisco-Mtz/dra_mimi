@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="phx-hero">
+    <h2> Agergar medicamento </h2>
+    </div>
+    <div clss="formularioMedicamento">
+        <%= form_for @changeset, Routes.gerencia_path(@conn, :nuevoMedicamentoC), fn f -> %>
+
+            <div class="card border-primary mb-3" style="max-width: 70rem;">
+                <div class="card-header">Ingrese la informacion requerida: </div>
+                <div class="card-body">
+                   <table>
+                        <tr>
+                            <td style="width: 15rem;"><b>Nombre comercial: </b><br> <input type="text" name="nombreComercial"></td>
+                            <td style="width: 15rem;"><b>Nombre generico: </b><br> <input type="text" name="nombreGenerico"></td>
+                            <td style="width: 10rem;"><b>Presentacion: </b><br> <input type="text" name="presentacion"></td>
+                            <td style="width: 10rem;"><b>Laboratorio: </b><br> <input type="text" name="laboratorio"></td>
+                            <td style="width: 10rem;"><b>Precio: </b><br> <input type="text" name="precio"></td>
+                            <td style="width: 10rem;"><b>Stock: </b><br> <input type="number" name="stock"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div>
+            <button type="submit" class="btn btn-outline-success"> Guardar </button>
+        <% end %>
+    </div>
+</div>
