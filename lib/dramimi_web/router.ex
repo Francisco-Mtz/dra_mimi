@@ -37,6 +37,7 @@ defmodule DramimiWeb.Router do
 
         #Rutas de apartado gerencia
         get "/gerenciaDashboard", GerenciaController, :gerenciaC
+        get "/mensajeAlert", GerenciaController, :mensajeCorrectoC
     
         get "/Agregar_Medicamento", GerenciaController, :agregarMedicamentoC
         post "/nuevoMedicamento", GerenciaController, :nuevoMedicamentoC
@@ -45,7 +46,7 @@ defmodule DramimiWeb.Router do
     
         get "/Buscar_Medicamento", GerenciaController, :buscarMedicamentoC
         post "/obtenerMedicamento", GerenciaController, :obtenerMedicamentoC
-        
+        get "/eliminarMedicamento/:idMedicamento", GerenciaController, :eliminarMedicamentoC
     
   end
 

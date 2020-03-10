@@ -17,9 +17,9 @@
                     </table>
                 </div>
             </div>
-            <div>
+            <div> 
             <button type="button" class="btn btn-outline-primary">Editar todo</button>
             <button type="button" class="btn btn-outline-primary">Modificar Stock</button>
-            <button type="button" class="btn btn-outline-danger">Eliminar</button>
+            <a href="/eliminarMedicamento/<%= @medicamento.id %>"><button type="button" class="btn btn-outline-danger">Eliminar</button></a>
             </div>
 </div>
