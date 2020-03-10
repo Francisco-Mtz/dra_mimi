@@ -1,0 +1,6 @@
+<br>
+<div class="alert alert-dismissible alert-success">
+        <button type="button" (click)="/Todos_los_medicamentos" class="close" data-dismiss="alert">
+        <a href="/gerenciaDashboard">&times;</a></button>
+  <strong>Todo salio bien!</strong> Su accion se ha realizado de manera exitosa.
+</div>

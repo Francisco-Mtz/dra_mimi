@@ -1,0 +1,6 @@
+<br>
+<div class="alert alert-dismissible alert-danger">
+        <button type="button" (click)="/Todos_los_medicamentos" class="close" data-dismiss="alert">
+        <a href="/gerenciaDashboard">&times;</a></button>
+  <strong>Algo ha salido mal!</strong> Verifique su informacion e intente nuevamente.
+</div>
