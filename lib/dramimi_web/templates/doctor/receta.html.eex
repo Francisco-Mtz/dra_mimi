@@ -1,0 +1,2 @@
+<h1 class="mt-5 mb-5">Crear receta</h1>
+<%= live_render(@conn, DramimiWeb.RecetaLive) %>

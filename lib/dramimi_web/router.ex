@@ -20,7 +20,11 @@ defmodule DramimiWeb.Router do
 
     get "/", PageController, :index
     get "/farmaciaDashboard", FarmaciaController, :index
+    get "/cuenta", FarmaciaController, :cuenta
+
     get "/doctorDashboard", DoctorController, :index
+    get "/receta", DoctorController, :receta
+
     get "/gerenciaDashboard", GerenciaController, :index
     get "/agregar", DoctorController, :agregar
     get "/crear_receta", DoctorController, :crear_receta
