@@ -1,5 +1,5 @@
 <div class="phx-hero">
-    <h2> Todos los medicamentos </h2>
+    <h2 class="mt-5 mb-5"> Todos los medicamentos </h2>
 </div>
 <div class="justify-content-center">
     <%= for medicamento <- @medicamentos do %>
@@ -7,7 +7,7 @@
             <div class="card border-primary mb-3" style="max-width: 60rem;">
                 <div class="card-header">Codigo: <%= medicamento.id%></div>
                 <div class="card-body">
-                   <table>
+                   <table> 
                         <tr>
                             <td style="width: 10rem;"><b>Nombre comercial: </b><%= medicamento.nombreComercial%></td>
                             <td style="width: 10rem;"><b>Nombre generico: </b><%= medicamento.nombreGenerico%></td>

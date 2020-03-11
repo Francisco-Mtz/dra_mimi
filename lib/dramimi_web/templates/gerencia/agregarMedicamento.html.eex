@@ -1,6 +1,6 @@
 <div class="container">
     <div class="phx-hero">
-    <h2> Agergar medicamento </h2>
+    <h2 class="mt-4 mb-4"> Agergar medicamento </h2>
     </div>
     <div clss="formularioMedicamento">
         <%= form_for @changeset, Routes.gerencia_path(@conn, :nuevoMedicamentoC), fn f -> %>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div>
-            <button type="submit" class="btn btn-outline-success"> Guardar </button>
+            <button type="submit" class="btn btn-outline-success mt-4"> Guardar </button>
         <% end %>
     </div>
 </div>
