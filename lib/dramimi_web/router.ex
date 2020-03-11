@@ -43,7 +43,11 @@ defmodule DramimiWeb.Router do
     
         get "/Buscar_Medicamento", GerenciaController, :buscarMedicamentoC
         post "/obtenerMedicamento", GerenciaController, :obtenerMedicamentoC
+        
+        get "/modificarMedicamento/:idMedicamento", GerenciaController, :modificarMedicamentoC
+        post "/nuevosDatos", GerenciaController, :nuevosDatosC
         get "/eliminarMedicamento/:idMedicamento", GerenciaController, :eliminarMedicamentoC
+
     
   end
 
