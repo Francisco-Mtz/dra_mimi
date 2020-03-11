@@ -27,9 +27,13 @@ defmodule DramimiWeb.Router do
 
     get "/agregar", DoctorController, :agregar
     get "/crear_receta", DoctorController, :crear_receta
-    get "/buscarp", DoctorController, :buscarp
+    get "/buscarPaciente", DoctorController, :buscarPaciente
     post "/nuevoPaciente", DoctorController, :nuevoPaciente
     post "/nuevaReceta", DoctorController, :nuevaReceta
+    get "/buscarMedicamentoD", DoctorController, :buscarMedicamentoDC
+    post "/obtenerMedicamentoD", DoctorController, :obtenerMedicamentoDC
+    post "/obtenerPaciente", DoctorController, :obtenerPaciente
+    
   
 
         #Rutas de apartado gerencia

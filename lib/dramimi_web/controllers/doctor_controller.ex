@@ -4,9 +4,15 @@ defmodule DramimiWeb.DoctorController do
     alias Dramimi.Recetas.Receta
     alias Dramimi.Repo
     alias Dramimi.Pacientes
+    alias Dramimi.Medicamentos
 
     def index(conn, _params) do
       render(conn, "index.html")
+    end
+
+    def buscarMedicamentoDC(conn, _params) do
+      idMedicamento = Ecto.Changeset
+      render(conn, "buscarMedicamentoD.html", idMedicamento: idMedicamento)
     end
 
     def receta(conn, _params) do
@@ -40,11 +46,25 @@ defmodule DramimiWeb.DoctorController do
       {:error, changeset} -> render(conn, "index.html")
       end
     end
-    
-    def buscarp(conn, _params) do
-      render(conn, "buscarp.html",pacientes: Pacientes.list_pacientes )
+
+    def obtenerMedicamentoDC(conn, %{"idMedicamento" => idMedicamento}) do
+      try do
+         render(conn, "medicamentoEncontradoD.html", medicamento: Medicamentos.get_medicamento!(idMedicamento))
+      after render(conn, "index.html")
+      end
     end
 
+    def obtenerPaciente(conn, %{"idPaciente" => idPaciente}) do
+      try do
+         render(conn, "buscarp.html", paciente: Pacientes.get_paciente!(idPaciente))
+      after render(conn, "index.html")
+      end
+    end
+
+    def buscarPaciente(conn, _params) do
+      idPaciente = Ecto.Changeset
+      render(conn, "buscarPaciente.html", idPaciente: idPaciente)
+    end
 
 
   end
