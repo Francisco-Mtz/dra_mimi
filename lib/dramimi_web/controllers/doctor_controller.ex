@@ -46,10 +46,6 @@ defmodule DramimiWeb.DoctorController do
       {:error, changeset} -> render(conn, "index.html")
       end
     end
-    
-    def buscarp(conn, _params) do
-      render(conn, "buscarp.html",pacientes: Pacientes.list_pacientes )
-    end
 
     def obtenerMedicamentoDC(conn, %{"idMedicamento" => idMedicamento}) do
       try do
@@ -58,6 +54,17 @@ defmodule DramimiWeb.DoctorController do
       end
     end
 
+    def obtenerPaciente(conn, %{"idPaciente" => idPaciente}) do
+      try do
+         render(conn, "buscarp.html", paciente: Pacientes.get_paciente!(idPaciente))
+      after render(conn, "index.html")
+      end
+    end
+
+    def buscarPaciente(conn, _params) do
+      idPaciente = Ecto.Changeset
+      render(conn, "buscarPaciente.html", idPaciente: idPaciente)
+    end
 
 
   end

@@ -1,24 +1,22 @@
-<div class="phx-hero">
-    <h2> Todos los pacientes </h2>
-</div>
-<BR><BR>
 <div class="justify-content-center">
-    <%= for paciente <- @pacientes do %>
-
-            <div class="card border-primary mb-3" style="max-width: 60rem;">
-                <div class="card-header">Codigo: <%= paciente.id%></div>
+    <div class="phx-hero">
+    <BR>
+    <h2> Paciente encontrado! </h2>
+    <BR><BR>
+    </div>
+            <div class="card border-primary mb-3" style="max-width: 70rem;">
+                <div class="card-header">Codigo: <%= @paciente.id%></div>
                 <div class="card-body">
                    <table>
                         <tr>
-                            <td style="width: 10rem;"><b>Nombre: </b><%=paciente.nombre%></td>
-                            <td style="width: 10rem;"><b>Edad: </b><%= paciente.edad%></td>
-                            <td style="width: 10rem;"><b>Genero: </b><br><%= paciente.genero%></td>
-                            <td style="width: 10rem;"><b>telefono: </b><br><%= paciente.telefono%></td>
+                            <td style="width: 15rem;"><b>Nombre: </b><br><%= @paciente.nombre%></td>
+                            <td style="width: 15rem;"><b>Edad: </b><br><%= @paciente.edad%></td>
+                            <td style="width: 10rem;"><b>Genero: </b><br><%= @paciente.genero%></td>
+                            <td style="width: 10rem;"><b>Telefono: </b><br><%= @paciente.telefono%></td>
                             
                         </tr>
                     </table>
                 </div>
             </div>
-
-    <% end %>
+            
 </div>
