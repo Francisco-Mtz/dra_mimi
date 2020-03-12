@@ -17,5 +17,6 @@ defmodule Dramimi.Pacientes.Paciente do
     paciente
     |> cast(attrs, [:nombre, :edad, :genero, :telefono])
     |> validate_required([:nombre, :edad, :genero, :telefono])
+    |> unique_constraint(:name, name: :pacientes_pkey)
   end
 end

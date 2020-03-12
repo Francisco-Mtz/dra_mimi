@@ -1,6 +1,6 @@
 <div class="container">
     <div class="phx-hero">
-    <h2 class="mt-4 mb-4"> Agergar medicamento </h2>
+    <h2 class="mt-4 mb-4"> Agregar medicamento </h2>
     </div>
     <div clss="formularioMedicamento">
         <%= form_for @changeset, Routes.gerencia_path(@conn, :nuevoMedicamentoC), fn f -> %>

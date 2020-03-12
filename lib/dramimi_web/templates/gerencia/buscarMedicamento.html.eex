@@ -6,7 +6,7 @@
         <%= form_for @idMedicamento, Routes.gerencia_path(@conn, :obtenerMedicamentoC), fn f -> %>
             <input class="form-control my-20 mr-sm-10" name="idMedicamento" type="number" placeholder="Id medicamento">
 
-            <button class="btn btn-secondary my-2 my-sm-20 mt-4" type="submit">Buscar</button>
+            <button class="btn btn-outline-success btn-lg mt-3" type="submit">Buscar</button>
         <% end %>
     </div>
 </div>
