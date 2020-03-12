@@ -20,17 +20,21 @@ defmodule DramimiWeb.DoctorController do
     end
 
     def agregar(conn, _params) do
-      changeset=Paciente.changeset(%Paciente{})
-      render(conn, "agregar.html", changeset: changeset)
+      changeset = Paciente.changeset(%Paciente{})
+        render(conn, "agregar.html", changeset: changeset)
     end
 
     def nuevoPaciente(conn, %{"nombre" => nombre, "edad" => edad, "genero" => genero, "telefono" => telefono}) do
-      changeset=Paciente.changeset(%Paciente{nombre: nombre, edad: String.to_integer(edad), genero: genero, telefono: String.to_integer(telefono)})
-      case Repo.insert(changeset)
-      do
-      {:ok, paciente} -> render(conn, "index.html",nombreEnviado: nombre) 
-      {:error, changeset} -> render(conn, "index.html")
-      end
+      edad_int = String.to_integer(edad)
+      telefono_int = String.to_integer(telefono)
+
+      nuevo_paciente = %{"nombre" => nombre, 
+        "edad" => edad_int, "genero" => genero, "telefono" => telefono_int}
+
+      {:ok, paciente_creado} = Pacientes.create_paciente(nuevo_paciente)
+      IO.inspect paciente_creado
+        changeset = Paciente.changeset(%Paciente{})
+        render(conn, "agregar.html", changeset: changeset)
     end
 
     def crear_receta(conn, _params) do

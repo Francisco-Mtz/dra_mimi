@@ -1,12 +1,12 @@
 <div class="container text-center ">
     <div class="phx-hero">
-        <h2 class="text-center"> Buscar medicamento </h2>
+        <h2 class="text-center mt-4 mb-4"> Buscar medicamento </h2>
     </div>
     <div clss="formularioMedicamento">
         <%= form_for @idMedicamento, Routes.doctor_path(@conn, :obtenerMedicamentoDC), fn f -> %>
             <input class="form-control my-20 mr-sm-10" name="idMedicamento" type="number" placeholder="Id medicamento">
 
-            <button class="btn btn-secondary my-2 my-sm-20" type="submit">Buscar</button>
+            <button class="btn btn-outline-success btn-lg mt-3" type="submit">Buscar</button>
         <% end %>
     </div>
 </div>

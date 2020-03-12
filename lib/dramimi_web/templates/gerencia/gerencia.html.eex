@@ -1,9 +1,9 @@
 <div class="container">
-    <div class="col text-center d-flex justify-content-center">
+    <div class="col text-center d-flex justify-content-center mt-4">
         <dl>
             <dt><a href="/Buscar_Medicamento"><button type="button" class="btn btn-outline-primary admn">Buscar medicamento</button></a></dt>
-            <dt><a href="/Agregar_Medicamento"><button type="button" class="btn btn-outline-primary admn">Agregar Medicamento</button></a></dt>
-            <dt><a href="/Todos_los_medicamentos"><button type="button" class="btn btn-outline-primary admn">Ver todos los medicamentos</button></a></dt>
+            <dt><a href="/Agregar_Medicamento"><button type="button" class="btn btn-outline-primary admn mt-4">Agregar Medicamento</button></a></dt>
+            <dt><a href="/Todos_los_medicamentos"><button type="button" class="btn btn-outline-primary admn mt-4">Ver todos los medicamentos</button></a></dt>
             <!--<dt><a href="/mensajeAlert"><button type="button" class="btn btn-outline-primary admn">Consultas personalizadas</button></a></dt>-->
         </dl>
     </div>

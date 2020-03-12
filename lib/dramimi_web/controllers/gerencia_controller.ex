@@ -42,10 +42,11 @@ defmodule DramimiWeb.GerenciaController do
       end
     end
 
-    def nuevosDatosC(conn, %{"nombreComercial" => nombreComercial, "nombreGenerico" => nombreGenerico, "laboratorio" => laboratorio, "precio" => precio, "presentacion" => presentacion, "stock" => stock}) do
+    def nuevosDatosC(conn, %{"idMedicamento" => idMedicamento, "nombreComercial" => nombreComercial, "nombreGenerico" => nombreGenerico, "laboratorio" => laboratorio, "precio" => precio, "presentacion" => presentacion, "stock" => stock}) do
       try do 
-        changeset = Medicamento.changeset(%Medicamento{nombreComercial: nombreComercial, nombreGenerico: nombreGenerico, presentacion: presentacion, laboratorio: laboratorio, precio: String.to_float(precio), stock: String.to_integer(stock)})
-        Medicamentos.update_medicamento(Medicamento.changeset(%Medicamento{}), changeset)
+        medicamento_a_modificar = Medicamentos.get_medicamento!(String.to_integer(idMedicamento))
+        modificado = %{nombreComercial: nombreComercial, nombreGenerico: nombreGenerico, presentacion: presentacion, laboratorio: laboratorio, precio: String.to_float(precio), stock: String.to_integer(stock)}
+        Medicamentos.update_medicamento(medicamento_a_modificar, modificado)
         render(conn, "correcto.html")
       after
         render(conn, "correcto.html")

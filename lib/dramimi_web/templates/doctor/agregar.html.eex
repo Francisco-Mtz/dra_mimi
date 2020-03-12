@@ -5,16 +5,16 @@
 
 <%= form_for @changeset, Routes.doctor_path(@conn, :nuevoPaciente), fn f -> %>
 <div class="form-group">
-    <label for="exampleFormControlInput1">Nombre:</label>
+    <label for="nombre">Nombre:</label>
     <input type="text" class="form-control" name="nombre">
     <BR><BR>
-    <label for="exampleFormControlInput1">Edad:</label>
+    <label for="edad">Edad:</label>
     <input type="number" class="form-control" name="edad">
     <BR><BR>
-    <label for="exampleFormControlInput1">Genero:</label>
+    <label for="genero">Genero:</label>
     <input type="text" class="form-control" name="genero">
     <BR><BR>
-    <label for="exampleFormControlInput1">Telefono:</label>
+    <label for="telefono">Telefono:</label>
     <input type="number" class="form-control" name="telefono">
     
     <BR><BR>

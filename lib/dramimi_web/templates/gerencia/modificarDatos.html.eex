@@ -1,7 +1,7 @@
 
 <div class="container">
     <div class="phx-hero">
-    <h2> Modificar medicamento </h2>
+    <h2 class="mt-4 mb-4"> Modificar medicamento </h2>
     </div>
     <div clss="formularioMedicamento">
         <%= form_for @changeset, Routes.gerencia_path(@conn, :nuevosDatosC), fn f -> %>
@@ -10,12 +10,13 @@
                 <div class="card-body">
                    <table>
                         <tr>
-                            <td style="width: 15rem;"><b>Nombre comercial: </b><br> <input type="text" placeholder="<%= @medicamento.nombreComercial%>" name="nombreComercial"></td>
-                            <td style="width: 15rem;"><b>Nombre generico: </b><br> <input type="text" placeholder="<%= @medicamento.nombreGenerico%>" name="nombreGenerico"></td>
-                            <td style="width: 10rem;"><b>Presentacion: </b><br> <input type="text" placeholder="<%= @medicamento.presentacion%>" name="presentacion"></td>
-                            <td style="width: 10rem;"><b>Laboratorio: </b><br> <input type="text" placeholder="<%= @medicamento.laboratorio%>" name="laboratorio"></td>
-                            <td style="width: 10rem;"><b>Precio: </b><br> <input type="text" placeholder="<%= @medicamento.precio%>" name="precio"></td>
-                            <td style="width: 10rem;"><b>Stock: </b><br> <input type="number" placeholder="<%= @medicamento.stock%>" name="stock"></td>
+                            <td style="width: 15rem;"><b>Nombre comercial: </b><br> <input type="text" value="<%= @medicamento.nombreComercial%>" name="nombreComercial"></td>
+                            <td style="width: 15rem;"><b>Nombre generico: </b><br> <input type="text" value="<%= @medicamento.nombreGenerico%>" name="nombreGenerico"></td>
+                            <td style="width: 10rem;"><b>Presentacion: </b><br> <input type="text" value="<%= @medicamento.presentacion%>" name="presentacion"></td>
+                            <td style="width: 10rem;"><b>Laboratorio: </b><br> <input type="text" value="<%= @medicamento.laboratorio%>" name="laboratorio"></td>
+                            <td style="width: 10rem;"><b>Precio: </b><br> <input type="text" value="<%= @medicamento.precio%>" name="precio"></td>
+                            <td style="width: 10rem;"><b>Stock: </b><br> <input type="number" value="<%= @medicamento.stock%>" name="stock"></td>
+                            <input type="hidden" name="idMedicamento" value="<%= @medicamento.id %>">
                         </tr>
                     </table>
                 </div>
